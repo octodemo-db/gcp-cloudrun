@@ -40,3 +40,9 @@ variable "gcr_image_tag" {
     type                = string
     description         = "The GCR container image tag to deploy"
 }
+
+variable "container_port" {
+    type                = number
+    description         = "The port on the container to expose"
+    default             = 80
+}
