@@ -1,6 +1,4 @@
 terraform {
-  experiments = [variable_validation]
-
   required_providers {
     google = ">=3.32"
   }
