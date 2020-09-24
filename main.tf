@@ -18,11 +18,7 @@ data "google_iam_policy" "noauth" {
 resource "google_cloud_run_service" "app" {
   name                  = var.gcp_application_name
   location              = var.gcp_region
-  project               = var.gcp_project
-
-  ports
-  protocol
-  
+  project               = var.gcp_project  
 
   template {
     spec {
