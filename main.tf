@@ -24,11 +24,9 @@ resource "google_cloud_run_service" "app" {
     spec {
       containers {
         image = "${var.gcr_hostname}/${var.gcp_project}/${var.gcr_image}:${var.gcr_image_tag}"
-        ports = [
-          {
-            container_port = var.container_port
-          }
-        ] 
+        ports {
+          container_port = var.container_port
+        }
       }
     }
   }
