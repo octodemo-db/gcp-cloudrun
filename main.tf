@@ -46,5 +46,5 @@ resource "google_cloud_run_service_iam_policy" "noauth" {
 
 
 output "url" {
-  value = "${google_cloud_run_service.app.status[0].url}"
+  value = google_cloud_run_service.app.status[0].url
 }
